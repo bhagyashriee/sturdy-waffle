@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Food</title>
+</head>
+<body>
+    <h1>Search for Food</h1>
+    <form method="GET" action="{% url 'get_nutrition' %}">
+        <input type="text" name="food_name" placeholder="Enter a food name">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

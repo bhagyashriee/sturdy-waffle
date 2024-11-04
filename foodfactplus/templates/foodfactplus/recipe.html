@@ -1,0 +1,18 @@
+<!-- recipe.html -->
+<h1>Recipe Nutritional Calculator</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Calculate Nutrition</button>
+</form>
+
+{% if nutrition %}
+    <h2>Nutritional Information</h2>
+    <ul>
+        <li>Energy: {{ nutrition.energy }} kcal</li>
+        <li>Protein: {{ nutrition.protein }} g</li>
+        <li>Fat: {{ nutrition.fat }} g</li>
+        <li>Carbohydrates: {{ nutrition.carbohydrates }} g</li>
+    </ul>
+{% endif %}

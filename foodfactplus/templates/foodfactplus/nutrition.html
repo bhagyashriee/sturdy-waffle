@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nutrition Information</title>
+</head>
+<body>
+	{% if nutrition %}
+		<h2>{{ food_name }}</h2>
+		<p>Energy: {{ nutrition.Energy }} kcal</p>
+		<p>Protein: {{ nutrition.Protein }} g</p>
+		<p>Fat: {{ nutrition.Fat }} g</p>
+		<p>Carbohydrate: {{ nutrition.Carbohydrate }} g</p>
+	{% else %}
+		<p>No nutrition information found for {{ food_name }}</p>
+	{% endif %}
+</body>
+</html>
