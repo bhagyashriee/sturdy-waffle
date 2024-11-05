@@ -37,6 +37,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 
+
+
+api_key = os.getenv('api_key')
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -140,12 +145,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from the .env file
-load_dotenv()
-
-# Now you can access the API key
-api_key = os.getenv('api_key')
