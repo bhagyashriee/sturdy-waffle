@@ -6,7 +6,7 @@ import requests
 load_dotenv()
 
 def get_nutrition_info(food_name):
-    #
+    
     api_key = os.getenv('API_KEY')
     api_url = os.getenv('API_URL')
 
@@ -15,7 +15,7 @@ def get_nutrition_info(food_name):
     if api_url is None:
         raise ValueError("API_URL is not set in environment variables")
 
-   s
+   
     url = f'{api_url}?api_key={api_key}&query={food_name}&nutrients=*'
     response = requests.get(url)
     data = response.json()
